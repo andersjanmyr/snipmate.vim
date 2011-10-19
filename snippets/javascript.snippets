@@ -10,10 +10,14 @@ snippet fun
 		${3:// body...}
 	}
 # Anonymous Function
-snippet fu
-	function(${1}) {${2}};
-# Anonymous Function
 snippet f
+	function(${1}) {${2}}${3}
+# Anonymous Function three lines
+snippet fu
+	function(${1}) {
+		${2}
+	}${3}
+snippet fm
 	function(${1}) {
 		${2}
 	},
@@ -91,3 +95,6 @@ snippet bef
 	beforeEach(function() {
 		${2}
 	});
+snippet log
+	console.log('${1}');
+	${2}
