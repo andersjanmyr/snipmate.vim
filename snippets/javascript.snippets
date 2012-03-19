@@ -6,17 +6,17 @@ snippet proto
 	};
 # Function
 snippet fun
-	function ${1:function_name} (${2:argument}) {
+	function ${1:function_name}(${2:argument}) {
 		${3:// body...}
 	}
 # Anonymous Function
 snippet f
-	function(${1}) {${2}}${3}
+	function(${1}) {${2}}
 # Anonymous Function three lines
 snippet fu
 	function(${1}) {
 		${2}
-	}${3}
+	}
 snippet fm
 	function(${1}) {
 		${2}
@@ -73,8 +73,14 @@ snippet :f
 		${4}
 	}${3:,}
 # setTimeout function
-snippet timeout
-	setTimeout(function() {${3}}${2}, ${1:10};
+snippet st
+	setTimeout(function() {
+		${2}
+	}, ${1:1000});
+snippet si
+	setInterval(function() {
+		${2}
+	}, ${1:1000});
 # Get Elements
 snippet get
 	getElementsBy${1:TagName}('${2}')${3}
@@ -98,3 +104,6 @@ snippet bef
 snippet log
 	console.log('${1}');
 	${2}
+snippet us
+	"use strict";
+	$0
